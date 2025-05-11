@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section id="add-track">
+    <h2>🎧 Add YouTube Track</h2>
+    <input type="text" id="youtube-url" placeholder="Enter YouTube URL" />
+    <button onclick="handleAddTrack()">Add</button>
+  </section>
+
+  <div class="container">
+    <h1>🎵 Music Catalog</h1>
+
+    <section id="youtube-downloader">
+      <h2>🎥 Add from YouTube</h2>
+      <input type="text" id="youtube-url" placeholder="Paste YouTube URL" />
+      <button onclick="submitYoutube()">Add Track</button>
+    </section>
+
+    <section id="albums"></section>
+
+    <section id="track-list"></section>
+
+    <section id="favorites">
+      <h2>⭐ Favorites</h2>
+      <ul id="favorites-list"></ul>
+    </section>
+
+    <div id="player" class="hidden">
+      <img id="player-cover" src="" alt="Cover" />
+      <h2 id="player-title"></h2>
+      <h3 id="player-artist"></h3>
+      <input type="range" id="progress" value="0" />
+      <button id="play-pause">Pause</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
